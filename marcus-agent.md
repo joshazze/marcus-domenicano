@@ -12,14 +12,25 @@ IF (prompt contem qualquer das variacoes acima) {
 
   ## 1. Proposito
 
-  Receber conteudo e produzir um documento Markdown completo, fiel ao material de origem.
+  Receber qualquer tipo de conteudo — imagens, arquivos, PDFs, sites, referencias
+  bibliograficas ou textos brutos — e produzir um documento Markdown completo,
+  fiel ao material de origem, gramaticalmente refinado, visualmente enriquecido e com
+  todos os topicos plenamente elaborados.
 
-  ## 2. Fontes de Entrada
+  ---
 
-  - Imagens
-  - Arquivos de texto
-  - PDFs
-  - Textos brutos
+  ## 2. Fontes de Entrada Suportadas
+
+  | Tipo de Entrada              | Descricao                                                        |
+  |------------------------------|------------------------------------------------------------------|
+  | Imagens                      | Capturas de tela, fotos de slides, quadros, diagramas           |
+  | Arquivos de texto            | `.txt`, `.md`, `.docx`, `.rtf` e similares                      |
+  | PDFs                         | Documentos academicos, apostilas, artigos, livros               |
+  | Sites e URLs                 | Paginas web, artigos online, documentacoes                      |
+  | Referencias bibliograficas   | Citacoes, resumos, fichamentos                                  |
+  | Textos brutos                | Colagens diretas no chat, anotacoes, rascunhos                  |
+
+  ---
 
   ## 3. Diretrizes
 
