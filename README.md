@@ -1,40 +1,51 @@
 <p align="center">
-  <img src="assets/banner.svg" alt="Marcus Domenicano" width="100%" />
+  <img src="assets/marcus-mascot.svg" width="180" alt="Marcus Domenicano" />
 </p>
 
-<br/>
+<h1 align="center">Marcus Domenicano</h1>
 
 <p align="center">
-  <a href="#-charting-the-course"><img src="https://img.shields.io/badge/⚓_setup-30_seconds-c4a265?style=for-the-badge&labelColor=3d2b1f" alt="Setup" /></a>
-  <a href="https://docs.anthropic.com/en/docs/claude-code"><img src="https://img.shields.io/badge/🧭_built_for-Claude_Code-8b6914?style=for-the-badge&labelColor=3d2b1f" alt="Claude Code" /></a>
-  <a href="https://obsidian.md/"><img src="https://img.shields.io/badge/📜_optional-Obsidian-6b4c11?style=for-the-badge&labelColor=3d2b1f" alt="Obsidian" /></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/⚖️_license-MIT-5a3e1b?style=for-the-badge&labelColor=3d2b1f" alt="MIT" /></a>
+  <img src="https://cdn.simpleicons.org/claude/c15f3c" width="32" alt="Claude" />
+  &nbsp;&nbsp;<strong style="font-size:1.4em">×</strong>&nbsp;&nbsp;
+  <img src="https://cdn.simpleicons.org/obsidian/7c3aed" width="32" alt="Obsidian" />
 </p>
 
-<br/>
+<p align="center">
+  <strong>The best Claude Code agent for refactoring <code>.md</code> files inside an Obsidian vault.</strong>
+  <br>
+  Turn raw notes, PDFs, screenshots, web articles, and messy drafts into <br>
+  structured, vault-ready documents — without losing a single word of the original.
+</p>
 
-<p align="center"><em>
-  <strong>M</strong>arcus <strong>D</strong>omenicano — the initials were never a coincidence.
-</em></p>
+<p align="center">
+  <a href="https://docs.anthropic.com/en/docs/claude-code"><img src="https://img.shields.io/badge/built_for-Claude_Code-c15f3c?style=flat-square&labelColor=262624" alt="Claude Code"></a>
+  <a href="https://obsidian.md"><img src="https://img.shields.io/badge/optimized_for-Obsidian-7c3aed?style=flat-square&labelColor=262624" alt="Obsidian"></a>
+  <img src="https://img.shields.io/badge/setup-30s-faf9f6?style=flat-square&labelColor=262624" alt="Setup in 30 seconds">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-262624?style=flat-square" alt="MIT"></a>
+</p>
 
 ---
 
-<br/>
+## Why Marcus
 
-> *"Give me any parchment — torn, faded, or foreign — and I shall return it*
-> *as a chart worthy of the finest captain's quarters."*
+If you live in Obsidian and use Claude Code, you already know the pain: you dump raw class notes, half-broken imports, OCR'd slides, or a mess of screenshots into a note, and the vault looks terrible. Inline formatters "clean" the text but silently drop facts. Generic agents rewrite in their own voice and flatten your terminology. Manual cleanup takes hours per note.
 
-<br/>
+**Marcus is the missing tool.** A Claude Code agent with one job: take anything you throw at it and produce a **finished, vault-ready `.md`** — saved directly to your Obsidian vault, named in `kebab-case`, linked with `[[wikilinks]]` to existing notes, formatted with proper Markdown, and — this is the point — **with zero information loss** and **the original author's voice preserved**.
 
-An agent for [Claude Code](https://docs.anthropic.com/en/docs/claude-code) that transforms **any content** — images, PDFs, websites, raw text, academic papers — into structured, complete, and visually rich **`.md`** documents.
+It's the best option available for this specific job, and it was built because nothing else does it right.
 
-Optionally saves directly to your [Obsidian](https://obsidian.md/) vault.
+### What makes it different
 
-<br/>
+- **Zero information loss.** Every fact, term, and definition from the source is kept. Marcus is forbidden from summarizing, condensing, or omitting.
+- **Original vocabulary is law.** Technical terms, jargon, proper nouns, and units of measurement are transcribed exactly as the author wrote them. No "simpler synonyms".
+- **Mandatory topic elaboration.** Short, fragmented bullets are *never* shipped as-is — Marcus expands them into complete, navigable prose while staying in the author's tone.
+- **No interpretation.** Zero opinions, zero external commentary, zero "helpful additions".
+- **Obsidian-native output.** Files land in `vault/marcus/`, in `kebab-case`, with `[[wikilinks]]` to notes that already exist in your vault.
+- **Works on any input.** Images, PDFs, websites, `.docx`, `.rtf`, raw text, bibliographic references — all handled through the same 10-step protocol.
 
-## ⚓ Charting the Course
+---
 
-### The swift route (one command)
+## Install
 
 ```bash
 git clone https://github.com/joshazze/marcus-domenicano.git
@@ -42,197 +53,120 @@ cd marcus-domenicano
 ./install.sh
 ```
 
-The helmsman will ask ye to choose yer heading:
+The installer asks which mode to set up:
 
 ```
-╔══════════════════════════════════════════════════╗
-║  Marcus Domenicano — Installer                   ║
-║                                                  ║
-║  1) Standalone — charts displayed at the helm    ║
-║  2) Obsidian   — charts stowed in yer vault      ║
-║                                                  ║
-║  Enter 1 or 2: _                                 ║
-╚══════════════════════════════════════════════════╝
+Marcus Domenicano - Installer
+==============================
+
+Choose your mode:
+
+1) Standalone (no Obsidian — documents shown in terminal only)
+2) Obsidian   (documents saved directly to your vault)
+
+Enter 1 or 2:
 ```
 
-### The manual route
+Pick **2** for the full Obsidian workflow. The installer prompts for your vault path and wires everything into `~/.claude/CLAUDE.md`. That's it.
 
-1. Pick yer chart:
+### Manual install
 
-   | Scroll | Heading |
-   |:-------|:--------|
-   | [`marcus-standalone.md`](marcus-standalone.md) | No vault — output at the helm only |
-   | [`marcus-obsidian.md`](marcus-obsidian.md) | Auto-stow in yer Obsidian vault |
+If you prefer to wire it up yourself:
 
-2. Append it to yer Claude Code orders:
+| File | Use case |
+|:---|:---|
+| [`marcus-obsidian.md`](marcus-obsidian.md) | Saves output directly to your Obsidian vault |
+| [`marcus-standalone.md`](marcus-standalone.md) | Terminal-only output, no vault integration |
 
-   ```bash
-   cat marcus-standalone.md >> ~/.claude/CLAUDE.md
-   ```
+Append the one you want to your Claude Code config:
 
-3. If using the Obsidian route, replace `<YOUR_OBSIDIAN_VAULT_PATH>` with yer vault's bearing.
+```bash
+cat marcus-obsidian.md >> ~/.claude/CLAUDE.md
+```
 
-<br/>
+If using the Obsidian file, replace `<YOUR_OBSIDIAN_VAULT_PATH>` with your vault's absolute path.
 
 ---
 
-<br/>
+## Usage
 
-## 🗺️ Charting Content
-
-Just hail **Marcus** in any Claude Code prompt:
+Just mention Marcus in any Claude Code prompt:
 
 ```
-marcus, chart this PDF: /path/to/treasure-map.pdf
+marcus, refactor this note into a proper vault document: /path/to/raw-notes.md
 ```
 
 ```
-marcus domenicano, turn these scattered notes into a proper document:
+marcus domenicano, turn these screenshots into a structured .md:
 
-[paste yer raw notes, screenshots, or any manner of parchment]
+[drop images or paste raw content]
 ```
 
 ```
-marcus, read this scroll from the web: https://example.com/article
+marcus, chart this article: https://example.com/paper
 ```
 
-### ⚓ Helm Commands
+### Slash commands
 
-| Command | What it charts |
-|:--------|:---------------|
+| Command | What it does |
+|:---|:---|
 | `/marcus` | Process a single source — file, URL, or inline text |
-| `/marcus-batch` | Chart multiple sources in one voyage |
-| `/marcus-review` | Review and refine an existing document |
+| `/marcus-batch` | Refactor multiple notes or sources in one pass |
+| `/marcus-review` | Re-pass an existing vault note through the full protocol |
 
-### 🏴‍☠️ Hailing Names
+### Name variations
 
-The cartographer answers to any of these (case-insensitive):
+Marcus answers to any of these (case-insensitive, with or without accents):
 
 ```
 marcus · marcos · marco · marcu
 domenicano · dominicano · domenico · dominico
-marcus domenicano · marco dominicano · ...
+marcus domenicano · marco dominicano · marcos domenicano · ...
 ```
-
-<br/>
 
 ---
 
-<br/>
+## Supported inputs
 
-## 📜 Accepted Cargo
-
-Marcus charts **any cargo ye deliver**:
-
-```
- ╭─────────────────────────────────────────────────────────╮
- │                                                         │
- │   📸  Images       screenshots, slides, whiteboards     │
- │   📄  Documents    .txt, .md, .docx, .rtf               │
- │   📕  PDFs         papers, textbooks, articles           │
- │   🌐  Websites     URLs, online docs, blog posts         │
- │   📚  References   citations, abstracts, bibliographies  │
- │   📝  Raw text     pasted notes, drafts, bullet points   │
- │                                                         │
- ╰─────────────────────────────────────────────────────────╯
-```
-
-<br/>
+| Type | Examples |
+|:---|:---|
+| Images | Screenshots, slide photos, whiteboards, diagrams |
+| Documents | `.txt`, `.md`, `.docx`, `.rtf` |
+| PDFs | Academic papers, textbooks, articles, handouts |
+| Web | URLs, online docs, blog posts |
+| References | Citations, abstracts, bibliographies |
+| Raw text | Pasted notes, drafts, bullet lists |
 
 ---
 
-<br/>
+## The 10-step protocol
 
-## 🧭 The Cartographer's Protocol
+Every document runs through the same fixed pipeline — no steps skipped:
 
-Every document passes through a **10-step charting protocol** — no shortcuts, no corners cut:
+1. **Identify the source.** Detect the input type and apply the right reading method.
+2. **Full extraction.** Pull every textual and structural element — titles, lists, tables, formulas, code, captions, footnotes.
+3. **Semantic analysis.** Map the topic hierarchy and flag incomplete sections.
+4. **Grammar refinement.** Fix typos and punctuation only — never change meaning, never swap vocabulary.
+5. **Topic elaboration.** Expand fragmented bullets into complete prose, in the author's tone.
+6. **Structure layout.** Apply Markdown hierarchy — `#`, `##`, `###`, `####`.
+7. **Visual enrichment.** Bold, italics, tables, code blocks, horizontal rules — mapped from the source's emphasis patterns.
+8. **Vault save** *(Obsidian mode)*. Write to `vault/marcus/` in `kebab-case`, add `[[wikilinks]]` to related notes.
+9. **Watermark.** Sign the document with the run date.
+10. **Deliver.** Show the final Markdown and confirm the save path.
 
-```
-                    ┌─────────────────────────┐
-                    │   I. Identify the Cargo  │
-                    └────────────┬────────────┘
-                                 ▼
-                    ┌─────────────────────────┐
-                    │  II. Full Extraction     │
-                    │  (text, tables, code,    │
-                    │   formulas, footnotes)   │
-                    └────────────┬────────────┘
-                                 ▼
-                    ┌─────────────────────────┐
-                    │ III. Semantic Analysis   │
-                    │  (map topic hierarchy)   │
-                    └────────────┬────────────┘
-                                 ▼
-                    ┌─────────────────────────┐
-                    │  IV. Grammar Refinement  │
-                    │  (fix typos, never       │
-                    │   change meaning)        │
-                    └────────────┬────────────┘
-                                 ▼
-                    ┌─────────────────────────┐
-                    │   V. Topic Elaboration   │
-                    │  (expand incomplete      │
-                    │   topics — MANDATORY)    │
-                    └────────────┬────────────┘
-                                 ▼
-                    ┌─────────────────────────┐
-                    │  VI. Structure Layout    │
-                    │  (Markdown hierarchy)    │
-                    └────────────┬────────────┘
-                                 ▼
-                    ┌─────────────────────────┐
-                    │ VII. Visual Enrichment   │
-                    │  (bold, tables, code     │
-                    │   blocks, separators)    │
-                    └────────────┬────────────┘
-                                 ▼
-                    ┌─────────────────────────┐
-                    │VIII. Stow in Vault       │
-                    │  (if Obsidian enabled)   │
-                    └────────────┬────────────┘
-                                 ▼
-                    ┌─────────────────────────┐
-                    │  IX. Watermark           │
-                    └────────────┬────────────┘
-                                 ▼
-                    ┌─────────────────────────┐
-                    │   X. Deliver the Chart   │
-                    └─────────────────────────┘
-```
+### The rules Marcus cannot break
 
-### The Cartographer's Code
-
-```
-  ┌─────────────────────────────────────────────────────────────────┐
-  │                                                                 │
-  │   🔒  ZERO INFORMATION LOSS                                     │
-  │       Every fact, term, and concept from the source             │
-  │       is preserved — nothing cast overboard.                    │
-  │                                                                 │
-  │   📖  ORIGINAL VOCABULARY                                       │
-  │       Technical terms and jargon remain exactly as              │
-  │       the author inscribed them.                                │
-  │                                                                 │
-  │   📐  MANDATORY ELABORATION                                     │
-  │       Short or fragmented topics are always expanded            │
-  │       into complete, navigable passages.                        │
-  │                                                                 │
-  │   🚫  NO INTERPRETATION                                         │
-  │       No opinions, external cargo, or subjective               │
-  │       commentary shall be smuggled aboard.                      │
-  │                                                                 │
-  └─────────────────────────────────────────────────────────────────┘
-```
-
-<br/>
+- Never summarize, condense, or omit source content
+- Never deliver fragmented topics without elaboration
+- Never rewrite in a way that alters meaning, tone, or intent
+- Never replace the author's terminology with synonyms
+- Never inject external information, opinions, or commentary
 
 ---
 
-<br/>
+## Obsidian integration
 
-## ⚙️ Obsidian Vault Integration
-
-When the Obsidian heading is set, charts are stowed in a `marcus/` hold within yer vault:
+When Obsidian mode is active, output lands in a `marcus/` folder inside your vault:
 
 ```
 YourVault/
@@ -242,63 +176,44 @@ YourVault/
     └── estruturas-de-dados.md
 ```
 
-**Provisions:**
-- File names in `kebab-case`, lowercase, no accents
-- `[[wikilinks]]` to related charts in yer vault
-- Ye organize the holds (subfolders) manually — Marcus just writes
-
-<br/>
+- File names: `kebab-case`, lowercase, no accents
+- `[[wikilinks]]` automatically added to notes that already exist in your vault
+- You organize subfolders manually — Marcus only writes
 
 ---
 
-<br/>
-
-## 🗂️ Ship's Manifest
+## Project structure
 
 ```
 marcus-domenicano/
-├── README.md                  ← Ye are here, sailor
-├── marcus-standalone.md       ← Agent orders (no vault)
-├── marcus-obsidian.md         ← Agent orders (with vault)
-├── install.sh                 ← The helmsman's script
+├── README.md                 ← you are here
+├── marcus-obsidian.md        ← agent spec (Obsidian mode)
+├── marcus-standalone.md      ← agent spec (terminal-only mode)
+├── install.sh                ← installer
 ├── assets/
-│   └── banner.svg             ← The old parchment header
-├── LICENSE                    ← MIT — sail free
-└── .gitignore
+│   └── marcus-mascot.svg     ← the pirate mascot
+└── LICENSE                   ← MIT
 ```
 
-<br/>
+---
+
+## Contributing
+
+Pull requests are welcome. Areas that would most benefit:
+
+- New slash commands for specific Obsidian workflows
+- Better wikilink detection heuristics
+- Additional input types (e.g. Jupyter notebooks, EPUB)
+- Refinements to the elaboration strategy for specific domains
 
 ---
 
-<br/>
+## License
 
-## 🤝 Join the Crew
-
-Contributions welcome aboard! Feel free to:
-
-- Open an issue with new headings or bugs found at sea
-- Submit a PR with improvements to the agent's orders
-- Share yer charting stories
-
-<br/>
-
----
-
-<br/>
-
-## ⚖️ License
-
-[MIT](LICENSE) — chart freely, sail wherever the wind takes ye.
-
-<br/>
+[MIT](LICENSE).
 
 ---
 
 <p align="center">
-  <br/>
-  <em>✨ Marcos Domenicano passou aqui.</em>
-  <br/>
-  <br/>
-  <sub>Content Cartographer — est. 2026</sub>
+  <sub>Content refiner for Claude Code × Obsidian — est. 2026</sub>
 </p>
