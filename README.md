@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/marcus.svg" width="180" alt="Marcus Domenicano" />
+  <img src="assets/mascote.svg" width="180" alt="Marcus Domenicano" />
 </p>
 
 <h1 align="center">Marcus Domenicano</h1>
@@ -191,7 +191,7 @@ marcus-domenicano/
 ├── marcus-standalone.md      ← spec do agente (modo terminal)
 ├── install.sh                ← instalador
 ├── assets/
-│   └── marcus.svg     ← o mascote pirata
+│   └── mascote.svg     ← o mascote pirata
 └── LICENSE                   ← MIT
 ```
 
