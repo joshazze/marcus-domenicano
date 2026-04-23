@@ -149,7 +149,7 @@ Todo documento passa pelo mesmo pipeline fixo — sem pular etapa:
 4. **Refinamento gramatical.** Corrige digitação e pontuação apenas — nunca altera sentido, nunca troca vocabulário.
 5. **Elaboração de tópicos.** Expande bullets fragmentados em prosa completa, no tom do autor.
 6. **Arquitetura do layout.** Aplica hierarquia Markdown — `#`, `##`, `###`, `####`.
-7. **Enriquecimento visual.** Negrito, itálico, tabelas, blocos de código, réguas horizontais — mapeados a partir dos padrões de ênfase da fonte.
+7. **Enriquecimento visual.** Negrito, itálico, tabelas, blocos de código, réguas horizontais — mapeados a partir dos padrões de ênfase da fonte. Espaçamento aplicado com densidade intencional: prosa respira, estrutura técnica gruda.
 8. **Salvamento no vault** *(modo Obsidian)*. Escreve em `vault/marcus/` em `kebab-case`, adiciona `[[wikilinks]]` pras notas relacionadas.
 9. **Marca d'água.** Assina o documento com a data do processamento.
 10. **Entrega.** Mostra o Markdown final e confirma o caminho salvo.

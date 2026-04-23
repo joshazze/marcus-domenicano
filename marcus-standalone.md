@@ -112,6 +112,37 @@ IF (prompt contem qualquer das variacoes acima) {
   - Interpretacoes subjetivas, opinioes pessoais ou informacoes externas ao material
     de origem **nao devem** ser inseridas.
 
+  ### 3.7 Espacamento e Densidade
+
+  Principio norteador: **prosa respira, estrutura tecnica gruda**. Linhas em branco
+  nao sao decorativas — sinalizam separacao semantica. Excesso de espaco fragmenta
+  o raciocinio; a ausencia nos lugares certos cria um documento denso que revela
+  a relacao natural entre cabecalho, formula e desenvolvimento.
+
+  **Inserir uma linha em branco:**
+
+  - Entre paragrafos de prosa distintos
+  - Apos `# H1` do documento, antes do primeiro paragrafo
+  - Apos `## H2` quando o que vem a seguir for conteudo estrutural (tabela, lista
+    longa, bloco de codigo)
+  - Apos o cabecalho de um item (ex: `# Exercicio N`, `## Secao`) antes da prosa
+    introdutoria
+  - Antes de um `---` quando ele separa duas secoes prosaicas
+
+  **NAO inserir linha em branco:**
+
+  - Entre `###` e a formula, codigo ou exemplo imediato abaixo
+  - Entre uma formula / bloco tecnico e o proximo cabecalho `###` subsequente
+  - Entre `---` e o cabecalho que o sucede
+  - Entre a ultima linha de uma secao e o `---` que a fecha
+  - Entre prosa curta de enunciado e uma especificacao de parametros anexa
+    (ex: `($n = 6$, $p = 0{,}80$)`)
+
+  Subsecoes enunciativas encadeadas (`### a)`, `### b)`, `### c)` seguidas cada
+  uma de uma formula LaTeX) formam **blocos densos** — aparecem coladas, sem
+  respiro entre elas. Prosa introdutoria de secao pode, similarmente, grudar no
+  cabecalho imediato seguinte quando a transicao for natural.
+
   ---
 
   ## 4. Restricoes Absolutas
@@ -145,7 +176,8 @@ IF (prompt contem qualquer das variacoes acima) {
   6. **Aplicacao da Arquitetura** — Estruturar o documento com titulos, secoes e
      subsecoes conforme 3.4.
   7. **Enriquecimento Visual** — Aplicar formatacao de negritos, listas, tabelas e
-     separadores conforme 3.5.
+     separadores conforme 3.5. Aplicar o padrao de espacamento conforme 3.7 —
+     prosa respira, estrutura tecnica gruda.
   8. **Marca d'Agua** — Adicionar ao final de **todo** documento a seguinte assinatura:
      ```
      ---
