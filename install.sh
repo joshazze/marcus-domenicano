@@ -86,9 +86,21 @@ else
   echo "$AGENT_CONTENT" > "$CLAUDE_MD"
 fi
 
+# Install slash commands to ~/.claude/commands/
+COMMANDS_DIR="$HOME/.claude/commands"
+mkdir -p "$COMMANDS_DIR"
+
+if [ -d "$SCRIPT_DIR/commands" ]; then
+  for cmd in "$SCRIPT_DIR/commands/"*.md; do
+    [ -f "$cmd" ] && cp "$cmd" "$COMMANDS_DIR/"
+  done
+  echo "  Slash commands installed: /marcus, /marcus-review, /marcus-batch"
+fi
+
 echo ""
 echo "  Done! Marcus Domenicano is now installed."
 echo ""
-echo "  Usage: mention 'marcus' in any Claude Code prompt."
+echo "  Usage: mention 'marcus' in any Claude Code prompt,"
+echo "         or use /marcus, /marcus-review, /marcus-batch."
 echo "  Example: marcus, process this PDF: /path/to/file.pdf"
 echo ""

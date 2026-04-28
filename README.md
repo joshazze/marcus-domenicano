@@ -190,6 +190,10 @@ marcus-domenicano/
 ├── marcus-obsidian.md        ← spec do agente (modo Obsidian)
 ├── marcus-standalone.md      ← spec do agente (modo terminal)
 ├── install.sh                ← instalador
+├── commands/                 ← slash commands instalados em ~/.claude/commands/
+│   ├── marcus.md
+│   ├── marcus-review.md
+│   └── marcus-batch.md
 ├── assets/
 │   └── mascote.svg     ← o mascote pirata
 └── LICENSE                   ← MIT
