@@ -1,3 +1,7 @@
+> [!IMPORTANT]
+> **Este repositório foi absorvido pelo framework [fernando-pessoa-agents](https://github.com/joshazze/fernando-pessoa-agents).**
+> Marcus virou o heterónimo de referência do método Fernando Pessoa, em `heteronimos/marcus/`. Este repo está arquivado (somente leitura); o desenvolvimento continua no novo.
+
 <p align="center">
   <img src="assets/mascote.svg" width="180" alt="Marcus Domenicano" />
 </p>
